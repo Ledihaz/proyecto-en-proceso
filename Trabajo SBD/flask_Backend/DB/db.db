@@ -1,0 +1,35 @@
+-- Crear el esquema público
+CREATE TABLE IF NOT EXISTS public.asistente (
+    no_tarjeta SERIAL PRIMARY KEY,
+    no_chef_jefe INTEGER(4),
+    clave_acces INTEGER(4),
+    confirmacion_asis BOOLEAN,
+    id_participante INTEGER(4),
+    nombre VARCHAR(255)
+);
+
+CREATE TABLE IF NOT EXISTS public.chef (
+    id_chef SERIAL PRIMARY KEY,
+    nombre VARCHAR(255),
+    email VARCHAR(255) UNIQUE
+);
+
+CREATE TABLE IF NOT EXISTS public.evento (
+    id_evento SERIAL PRIMARY KEY,
+    nombre VARCHAR(255),
+    fecha DATE,
+    chef_id INTEGER(4),
+    FOREIGN KEY(chef_id) REFERENCES chef(id_chef)
+);
+
+CREATE TABLE IF NOT EXISTS public.ingredientes (
+    id_ingrediente SERIAL PRIMARY KEY,
+    nombre VARCHAR(255),
+    cantidad REAL,
+    unidad VARCHAR(50)
+);
+
+CREATE TABLE IF NOT EXISTS public.participantes (
+    id_participante SERIAL PRIMARY KEY,
+    nombre VARCHAR(255),
+    email VARCHAR(255) UNIQUE)

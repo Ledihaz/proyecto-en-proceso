@@ -1,0 +1,18 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <title>Crear Chef</title> <style> body { font-family: Arial, sans-serif; background: linear-gradient(to right, #ff6b6b, #ffa500); /* Gradiente naranja-rojo */ display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; } form { background-color: white; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); width: 400px; } h2 { text-align: center; margin-top: 0; color: #ff6b6b; /* Color del título */ } label { display: block; font-weight: bold; } input { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 15px; } input[type="submit"] { background-color: #ff6b6b; /* Color del botón */ color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; display: block; margin: 0 auto; transition: background-color 0.3s ease; } input[type="submit"]:hover { background-color: #ff4d4d; /* Color del botón al pasar el mouse */ } </style> </head> <body> <form action="/create_chef" method="post"> <h2>Crear Chef</h2> <label for="no_tarjeta">Número de Tarjeta:</label> <input type="number" id="no_tarjeta" name="no_tarjeta" required>
+
+    <label for="clave_acces">Clave de Acceso:</label>
+    <input type="password" id="clave_acces" name="clave_acces" required>
+
+    <label for="tarjetas_asistentes">Tarjetas Asistentes:</label>
+    <input type="number" id="tarjetas_asistentes" name="tarjetas_asistentes" required>
+
+    <label for="n_receta">Número de Receta:</label>
+    <input type="number" id="n_receta" name="n_receta" required>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <input type="submit" value="Crear Chef">
+</form>
+
+</body> </html>

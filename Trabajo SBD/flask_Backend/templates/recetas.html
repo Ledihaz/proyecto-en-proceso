@@ -1,0 +1,30 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <title>Recetas</title> <style> body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: linear-gradient(to right, #ff6b6b, #ffa500); display: flex; justify-content: center; align-items: center; height: 100vh; }
+
+    h2 {
+        text-align: center;
+        color: white;
+        margin-bottom: 20px;
+    }
+    
+    table {
+        background-color: white;
+        border-collapse: collapse;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    th, td {
+        padding: 10px 20px;
+        text-align: left;
+    }
+    
+    th {
+        background-color: #ffa500;
+        color: white;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+</style>
+
+</head> <body> <div> <h2>Lista de Recetas</h2> <table border="1"> <thead> <tr> <th>Nombre</th> <th>Descripcion</th> </tr> </thead> <tbody> {% for receta in recetas %} <tr> <td>{{ receta.0 }}</td> <td>{{ receta.1 }}</td> </tr> {% endfor %} </tbody> </table> </div> </body> </html>

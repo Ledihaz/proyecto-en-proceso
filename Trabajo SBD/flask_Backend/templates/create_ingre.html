@@ -1,0 +1,9 @@
+ <!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <title>Agregar Ingrediente</title> <style> body { font-family: Arial, sans-serif; background: linear-gradient(to right, #ff6b6b, #ffa500); /* Gradiente naranja-rojo */ display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; } form { background-color: white; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); width: 400px; } h2 { text-align: center; margin-top: 0; color: #ff6b6b; /* Color del título */ } label { display: block; font-weight: bold; } input, textarea { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 15px; } button { background-color: #ff6b6b; /* Color del botón */ color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; display: block; margin: 0 auto; transition: background-color 0.3s ease; } button:hover { background-color: #ff4d4d; /* Color del botón al pasar el mouse */ } </style> </head> <body> <form action="{{ url_for('create_ingre') }}" method="post"> <h2>Agregar Ingrediente</h2> <label for="nombreingr">Nombre del Ingrediente:</label> <input type="text" id="nombreingr" name="nombreingr" required>
+
+    <label for="descripcion">Descripción:</label>
+    <textarea id="descripcion" name="descripcion" required></textarea>
+
+    <button type="submit">Agregar Ingrediente</button>
+</form>
+
+</body> </html>
